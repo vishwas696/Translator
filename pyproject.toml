@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "translator-project"
+version = "0.1.0"
+description = "Document translation CLI and FastAPI backend with DOCX/EPUB/TXT parsing and export."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "openai-agents[litellm]",
+  "python-dotenv",
+  "beautifulsoup4",
+  "docx2python",
+  "fastapi",
+  "google-auth",
+  "mysql-connector-python",
+  "python-multipart",
+  "razorpay",
+  "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+]
+
+[project.scripts]
+translator-book = "translator.cli.book:run"
+translator-compare-docx = "translator.documents.docx_compare:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"translator.storage" = ["*.sql"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]

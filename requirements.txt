@@ -1,0 +1,10 @@
+openai-agents[litellm]
+python-dotenv
+beautifulsoup4
+docx2python
+fastapi
+google-auth
+mysql-connector-python
+python-multipart
+razorpay
+uvicorn

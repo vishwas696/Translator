@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+outputs/
+backend_storage/
+stitch_lexiflow_ai_design_system*.zip
+stitch_lexiflow_ai_design_system*_extracted/

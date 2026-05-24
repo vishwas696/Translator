@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LexiFlow AI</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css?v=20260524-razorpay" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">L</div>
+          <div>
+            <div class="brand-name">LexiFlow AI</div>
+            <div class="brand-subtitle">Precision Workspace</div>
+          </div>
+        </div>
+        <button class="new-button" data-action="new-upload">
+          <span class="material-symbols-outlined">add</span>
+          New Translation
+        </button>
+        <nav class="nav-list" aria-label="Primary">
+          <button class="nav-item active" data-view="documents">
+            <span class="material-symbols-outlined">description</span>
+            Documents
+          </button>
+          <button class="nav-item" data-view="usage">
+            <span class="material-symbols-outlined">bar_chart</span>
+            Usage
+          </button>
+          <button class="nav-item" data-view="settings">
+            <span class="material-symbols-outlined">settings</span>
+            Settings
+          </button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="status-dot"></div>
+          <span>Backend linked</span>
+        </div>
+      </aside>
+
+      <main class="main-shell">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow" id="view-eyebrow">Workspace</div>
+            <h1 id="view-title">Overview</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="refresh-button" title="Refresh">
+              <span class="material-symbols-outlined">refresh</span>
+            </button>
+            <div class="account-pill">
+              <span class="material-symbols-outlined">account_circle</span>
+              Local user
+            </div>
+          </div>
+        </header>
+
+        <section id="notice" class="notice hidden" role="status"></section>
+        <section id="view-root" class="view-root"></section>
+      </main>
+    </div>
+
+    <template id="loading-template">
+      <div class="loading-card">
+        <div class="scan-document">
+          <span class="material-symbols-outlined">description</span>
+          <div class="scan-line"></div>
+        </div>
+        <p>Preparing workspace...</p>
+      </div>
+    </template>
+
+    <script src="/assets/app.js?v=20260524-razorpay" type="module"></script>
+  </body>
+</html>
